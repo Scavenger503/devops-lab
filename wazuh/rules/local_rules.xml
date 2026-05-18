@@ -1,0 +1,22 @@
+<!-- Local rules -->
+<!-- Modify it at your will. -->
+<!-- Copyright (C) 2015, Wazuh Inc. -->
+
+<!-- Example -->
+<group name="local,syslog,sshd,">
+  <rule id="100001" level="5">
+    <if_sid>5716</if_sid>
+    <srcip>1.1.1.1</srcip>
+    <description>sshd: authentication failed from IP 1.1.1.1.</description>
+    <group>authentication_failed,pci_dss_10.2.4,pci_dss_10.2.5,</group>
+  </rule>
+</group>
+
+<group name="ossec">
+  <rule id="100100" level="0">
+    <if_sid>533</if_sid>
+    <match>netstat listening ports</match>
+    <regex>firefox|kdeconnect|avahi</regex>
+    <description>Ignore port change alerts from known safe processes on Fedora</description>
+  </rule>
+</group>

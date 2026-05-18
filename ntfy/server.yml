@@ -1,0 +1,2 @@
+base-url: http://YOUR_INTERNAL_IP:2586
+upstream-base-url: "https://ntfy.sh"

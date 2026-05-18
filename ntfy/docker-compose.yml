@@ -1,0 +1,12 @@
+version: "3"
+services:
+  ntfy:
+    image: binwiederhier/ntfy
+    container_name: ntfy
+    restart: unless-stopped
+    ports:
+      - "2586:80"
+    volumes:
+      - /opt/docker/ntfy/cache:/var/cache/ntfy
+      - /opt/docker/ntfy/etc:/etc/ntfy
+    command: serve
