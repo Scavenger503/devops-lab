@@ -1,4 +1,4 @@
 # DevOps Lab
 ## Infrastructure
 
-THIS IS BEING UPDATED vi Git
+This repo is being updated via Git
